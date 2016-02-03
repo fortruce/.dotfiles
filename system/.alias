@@ -1,0 +1,47 @@
+alias l="ls -lah"
+alias ld="ls -lhd"
+alias ..="cd .."
+alias ...="cd ../.."
+alias ....="cd ../../.."
+alias ~="cd ~"
+alias -- -="cd -"
+
+alias p="cd ~/Documents/projects"
+
+# Show/hide hidden files in Finder
+alias show="defaults write com.apple.finder AppleShowAllFiles -bool true && killall Finder"
+alias hide="defaults write com.apple.finder AppleShowAllFiles -bool false && killall Finder"
+
+# Ring the terminal bell, and put a badge on Terminal.app’s Dock icon
+# (useful when executing time-consuming commands)
+alias badge="tput bel"
+
+# Intuitive map function
+# For example, to list all directories that contain a certain file:
+# find . -name .gitattributes | map dirname
+alias map="xargs -n1"
+
+# Stuff I never really use but cannot delete either because of http://xkcd.com/530/
+alias stfu="osascript -e 'set volume output muted true'"
+alias pumpitup="osascript -e 'set volume 7'"
+
+# Kill all the tabs in Chrome to free up memory
+# [C] explained: http://www.commandlinefu.com/commands/view/402/exclude-grep-from-your-grepped-output-of-ps-alias-included-in-description
+alias chromekill="ps ux | grep '[C]hrome Helper --type=renderer' | grep -v extension-process | tr -s ' ' | cut -d ' ' -f2 | xargs kill"
+
+
+alias ap='ansible-playbook'
+
+# Grep excluding node_modules dir
+alias ngrep='grep -r --exclude-dir node_modules'
+
+# Git
+alias git=hub
+alias gs='git status'
+alias glo='git log --oneline'
+alias gc='git commit'
+alias gcm='git commit -m'
+alias ga='git add'
+alias gaa='git add .'
+alias gwip='gaa && gcm "WIP"'
+alias gconflict='git diff --name-only --diff-filter=U | xargs emacs'

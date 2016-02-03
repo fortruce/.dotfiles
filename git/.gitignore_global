@@ -1,0 +1,8 @@
+*~
+._*
+.DS_Store
+node_modules
+
+.tern-port
+.dir-locals.el
+.env

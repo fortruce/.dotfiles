@@ -1,0 +1,10 @@
+[user]
+        name = Joseph Rollins
+        email = rollins.joseph@gmail.com
+[core]
+        excludesfile = ~/.gitignore_global
+        editor = vim
+[push]
+        default = current
+[github]
+        user = fortruce
