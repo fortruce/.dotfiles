@@ -1,5 +1,7 @@
 brew install nvm
 
+. "$DOTFILES_DIR/system/.nvm"
+
 nvm install 5.5
 nvm use 5.5
 nvm alias default 5.5
