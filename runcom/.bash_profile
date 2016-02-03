@@ -2,14 +2,6 @@
 
 [ -z "$PS1" ] && return
 
-# OS
-
-if [ "$(uname -s)" = "Darwin" ]; then
-    OS="OSX"
-else
-    OS=$(uname -s)
-fi
-
 # Resolve DOTFILES_DIR (assuming ~/.dotfiles on distros without readlink and/or $BASH_SOURCE/$0)
 
 READLINK=$(which greadlink || which readlink)
@@ -30,3 +22,5 @@ fi
 for DOTFILE in "$DOTFILES_DIR"/system/.{functions,path,env,secrets,alias,completion,prompt,nvm}; do
     [ -f "$DOTFILE" ] && . "$DOTFILE"
 done
+
+export DOTFILES_DIR
