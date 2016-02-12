@@ -13,6 +13,7 @@ apps=(
     git
     httpie
     hub
+    rabbitmq
     tree
     watchman
 )

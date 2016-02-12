@@ -13,6 +13,7 @@ apps=(
     flux
     google-chrome
     google-chrome-canary
+    google-cloud-sdk
     iterm2-beta
     licecap
     mou
