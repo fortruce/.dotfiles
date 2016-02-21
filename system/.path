@@ -1,3 +1,4 @@
+prepend-path "$GOPATH/bin"
 prepend-path "$HOME/bin"
 prepend-path "./node_modules/.bin"
 prepend-path "/opt/homebrew-cask/Caskroom/google-cloud-sdk/latest/google-cloud-sdk/path.bash.inc"
